@@ -1,4 +1,48 @@
 body {
     margin: 0;
     padding: 10px;
-    }
+    background-color: rgb(36, 31, 31);
+    color: rgb(230, 199, 199);
+}
+
+.container {
+    width: min(80ch, 100vh - 4rem);
+    margin-inline: auto;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.active {
+    font-weight: bold;
+}
+
+.hero{
+    display: grid;
+    grid-template-areas: "stack";
+}
+
+.hero > * {
+    color: White;
+    grid-area: stack;
+}
+
+img{
+    width: 100%;
+    max-width: 100%;
+}
+
+.titeltext{
+    text-align: center;
+    margin-top: 20;
+}

@@ -12,25 +12,31 @@ nunjucks.configure('views', {
 
 const port = process.env.PORT || 3000
 
+
+app.use((req, res, next)=>{
+    res.locals.url = req.originalUrl
+    next()
+})
+
 app.use("/", indexRouter)
 
 app.use(express.static('public'))
 
-app.get("/",(req, res) => {
-    res.render("index.njk",{title: 'Hello world from template'})
-})
+//app.get("/",(req, res) => {
+//    res.render("index.njk",{title: 'Hello world from template'})
+//})
 
 
-app.get("/tre",(req, res) => {
-    res.send("Trevligt")
-})
+//app.get("/tre",(req, res) => {
+//    res.send("Trevligt")
+//})
 
-app.get("/hello",(req, res) => {
-    const name ="malte"
-    const surname = "lindkvist"
+//app.get("/hello",(req, res) => {
+ //   const name ="malte"
+   // const surname = "lindkvist"
     
-    res.send(`hello ${name} ${surname}`)
-})
+  //  res.send(`hello ${name} ${surname}`)
+//})
 
 
 
