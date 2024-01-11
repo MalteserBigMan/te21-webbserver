@@ -1,14 +1,15 @@
-{% extends "layout.njk" %}
-{% block content %}
-<main class="container">
-    <header class="hero">
-        <img src="/bild/vitmustache.jpg" alt="White Beard">
-        <h1 class="whitebeardtext">{{ onepiecetitel }}</h1>
-    </header>
-    <form action="/onepiece" method="post">
-        <label for="greeting">Text edit</label>
-        <input type="text" name="onepiecetitel" id="onepiecetitel" required>
-        <button typ="submit">Skicka</button>
-    </form>
-</main>
-{% endblock %}
+{%extends "layout.njk"%}
+
+{%block content%}
+    <main class="container">
+        <header class="hero">
+            <img src="/bild/vitmustache.jpg" alt="White Beard">
+            <h1 class="whitebeardtext">{{ onepiecetitel }}</h1>
+        </header>
+        <form action="/onepiece" method="post">
+            <input type="text" id="titleInput" name="newTitle" placeholder="Skriv en ny hero">
+            <button type="submit">Change Title</button>
+        </form>
+    </main>
+    <script src="/yourScript.js"></script>
+{%endblock%}
