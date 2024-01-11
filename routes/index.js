@@ -13,6 +13,11 @@ router.get("/about", function (req, res) {
 })
 
 router.get("/onepiece", function (req, res) {
-  res.render('onepiece.njk', { title: 'THE ONE PIECE IS REAL' })
+  res.render('onepiece.njk', { onepiecetitel: 'THE ONE PIECE IS REAL' })
+})
+
+
+router.post("/onepiece", function (req,res){
+  res.render('onepiece.njk', {greeting: onepiecetitel})
 })
 module.exports = router
